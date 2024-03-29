@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   Menubar,
@@ -8,6 +9,7 @@ import {
   MenubarShortcut,
   MenubarTrigger,
 } from "@/components/ui/menubar";
+import { Button } from "../ui/button";
 
 export const Nav = () => {
   return (
@@ -25,6 +27,18 @@ export const Nav = () => {
             <MenubarSeparator />
             <MenubarItem>Print</MenubarItem>
           </MenubarContent>
+        </MenubarMenu>
+        <MenubarMenu>
+          <Button
+            variant={"outline"}
+            type="button"
+            className="w-28"
+            onClick={() => {
+              window.location.reload();
+            }}
+          >
+            Clear
+          </Button>
         </MenubarMenu>
       </Menubar>
     </main>
